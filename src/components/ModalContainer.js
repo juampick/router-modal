@@ -2,9 +2,9 @@ import React from 'react'
 
 function getModal(search) {
     switch (search) {
-        case '?modal-a':
+        case '#modal-a':
             return <div>Modal A</div>
-        case '?modal-b':
+        case '#modal-b':
             return <div>Modal B</div>
         default:
             return null
@@ -14,6 +14,6 @@ function getModal(search) {
 export default props => {
     return <div>
         {props.children}
-        {getModal(props.location.search)}
+        {getModal(props.location.hash)}
     </div>
 }
